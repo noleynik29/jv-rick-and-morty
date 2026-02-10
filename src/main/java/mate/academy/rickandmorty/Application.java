@@ -1,12 +1,12 @@
 package mate.academy.rickandmorty;
 
+import java.util.ArrayList;
+import java.util.List;
 import mate.academy.rickandmorty.dto.external.CharacterExternalDto;
 import mate.academy.rickandmorty.dto.external.CharacterInputDto;
 import mate.academy.rickandmorty.repository.CharacterRepository;
 import mate.academy.rickandmorty.service.CharactersClient;
 import mate.academy.rickandmorty.service.CharactersService;
-import java.util.ArrayList;
-import java.util.List;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
