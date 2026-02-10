@@ -4,11 +4,11 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import mate.academy.rickandmorty.dto.internal.CharacterOutputDto;
 import mate.academy.rickandmorty.service.CharactersService;
+import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
 
 @Tag(name = "Character management", description = "Endpoint for managing characters")
 @RestController
@@ -26,7 +26,8 @@ public class CharactersController {
         return charactersService.getRandomCharacter();
     }
 
-    @Operation(summary = "Get character by name", description = "Part of character name (case-insensitive)")
+    @Operation(summary = "Get character by name",
+            description = "Part of character name (case-insensitive)")
     @GetMapping
     public List<CharacterOutputDto> getCharacterByName(@RequestParam String name) {
         return charactersService.getCharacterByName(name);

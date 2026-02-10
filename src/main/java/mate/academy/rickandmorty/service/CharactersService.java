@@ -3,13 +3,13 @@ package mate.academy.rickandmorty.service;
 import mate.academy.rickandmorty.dto.external.CharacterExternalDto;
 import mate.academy.rickandmorty.dto.internal.CharacterOutputDto;
 import mate.academy.rickandmorty.repository.CharacterRepository;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.stereotype.Service;
 import mate.academy.rickandmorty.entity.Character;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
 @Service
 public class CharactersService {

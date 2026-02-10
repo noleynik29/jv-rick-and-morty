@@ -5,14 +5,13 @@ import mate.academy.rickandmorty.dto.external.CharacterInputDto;
 import mate.academy.rickandmorty.repository.CharacterRepository;
 import mate.academy.rickandmorty.service.CharactersClient;
 import mate.academy.rickandmorty.service.CharactersService;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Profile;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootApplication
 @Profile("!test")
@@ -24,7 +23,9 @@ public class Application implements ApplicationRunner {
 
     private final CharacterRepository characterRepository;
 
-    public Application(CharactersClient charactersClient, CharactersService charactersService, CharacterRepository characterRepository) {
+    public Application(CharactersClient charactersClient,
+                       CharactersService charactersService,
+                       CharacterRepository characterRepository) {
         this.charactersClient = charactersClient;
         this.charactersService = charactersService;
         this.characterRepository = characterRepository;
